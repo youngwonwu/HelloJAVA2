@@ -37,7 +37,7 @@ public class DataSource {	//싱글툰 class 패턴
 	public Connection getConnection() {	//연결함
 		try {
 			configuration();
-			Class.forName(driver);	//내 앱과 연결함 driver loading 
+			Class.forName(driver);	//내 앱과 연결함 driver loading		driver -> DBMS에서 사용할 driver
 			conn = DriverManager.getConnection(url, user, password);	// 연결할 수있는 터널만듬, 사용자의 주소, 계정, 비번 입력
 			System.out.println("DB 연결성공");
 		} catch(ClassNotFoundException | SQLException e) {
